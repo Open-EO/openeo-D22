@@ -37,6 +37,7 @@ def print_info(data):
     print('Raster shape:', data.shape)
     print('Min:', round(np.nanmin(data), 3))
     print('Mean:', round(np.nanmean(data), 3))
+    print('Median:', round(np.nanmedian(data), 3))
     print('Max:', round(np.nanmax(data), 3))
     print('Negative values [%]:', np.round(np.sum(data < 0) / (data.shape[0] * data.shape[1]), decimals=3) * 100, '%')
     print('Negative values (<-1000) [%]:', np.round(np.sum(data < -1000) / (data.shape[0] * data.shape[1]), decimals=3) * 100, '%')
