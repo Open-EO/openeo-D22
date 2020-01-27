@@ -40,4 +40,4 @@ def sinergise_script(output_filename):
 
     min_evi = evi_cube.min_time()
 
-    min_evi.download(output_filename,format="GTiff")
+    min_evi.download(output_filename, format="GTiff", options={"datatype": "float32"})
