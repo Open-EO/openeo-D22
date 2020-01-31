@@ -17,16 +17,16 @@ def mundialis_script(output_filename):
 
     session = openeo.connect(backend_url, auth_type='basic', auth_options={"username": os.environ["MUNDIALIS_USERNAME"], "password": os.environ["MUNDIALIS_PASSWORD"]})
 
-    minx = 10.44662475585937
-    maxx = 10.62927246093749
-    maxy = 46.84516443029275
-    miny = 46.72574176193996
+    minx = 11.279182434082033
+    maxx = 11.406898498535158
+    maxy = 46.522729291844286
+    miny = 46.464349400461145
     epsg = "EPSG:4326"
 
     s2_radiometry = ImageCollectionClient.load_collection(
                         session=session,
                         collection_id=collection_id,
-                        temporal_extent=["2018-05-01T00:00:00.000Z","2018-10-01T00:00:00.000Z"],
+                        temporal_extent=["2018-06-04T00:00:00.000Z","2018-06-23T00:00:00.000Z"],
                         spatial_extent={'west':minx,'east':maxx,'north':maxy,'south':miny,'crs':epsg}
                         )                    
     B02 = s2_radiometry.band("S2_2")
