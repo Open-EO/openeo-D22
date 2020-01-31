@@ -5,7 +5,7 @@ import openeo
 from openeo.rest.imagecollectionclient import ImageCollectionClient
 
 
-def mundialis_script(input_data, output_filename):
+def mundialis_script(output_filename):
     """
     
     """
@@ -39,4 +39,3 @@ def mundialis_script(input_data, output_filename):
     
     output = min_evi.download(output_filename,format="GTiff")
 
-mundialis_script("g","bla.tif")
